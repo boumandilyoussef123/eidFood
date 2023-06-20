@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-image: linear-gradient(
+        to right,
+        #bfd7d0,
+        #cbdacf,
+        #d7ddd0,
+        #e1e0d4,
+        #eae3da
+    );
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+        linear-gradient(#fff, #fff);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+    margin-right: 20px;
+    background-image: linear-gradient(transparent, transparent),
+        linear-gradient(#6f4a2d, #6f4a2d);
+}
+
+.link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%;
+}
